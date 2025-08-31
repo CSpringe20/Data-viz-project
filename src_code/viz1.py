@@ -67,7 +67,7 @@ fig = px.scatter(
     out,
     x=var1,
     y=var2,
-    animation_frame=out["Date"].dt.year.astype(str), # show just year instead of entire timestamp
+    animation_frame=out["Date"].dt.strftime("%Y-%m"), # show just year instead of entire timestamp
     animation_group="Location",
     color="Location",
     color_discrete_map=color_map
